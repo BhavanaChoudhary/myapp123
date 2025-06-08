@@ -1,0 +1,10 @@
+ - name: Deploy maven artifact
+   hosts: localhost
+   become: yes
+   tasks: 
+     - name: create deployment directory 
+       file:
+         path: /opt/deployment
+         state: directory
+         mode: '0755'
+
